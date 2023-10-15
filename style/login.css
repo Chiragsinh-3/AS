@@ -1,60 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+nav {
+    margin: 0;
+    display: flex;
+    background-color: black;
+}
 
-        .container {
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-image: url('"D:\Shubham7807\DE\sheets\sa.jpg"');
-            background-position: center;
-            background-size: cover;
-        }
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.navigation li {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 5px;
+    border-color: aliceblue;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: Century;
+}
 
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
+.navigation li:hover {
+    background-color: white;
 
-        button {
-            padding: 10px 16px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+a:hover {
+    color: rgb(0, 0, 0);
+}
 
-        .message {
-            margin-top: 20px;
-            text-align: center;
-            color: red;
-        }
+body {
+    margin: 20px;
+}
 
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    width: 50%;
+    height: 250px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('"D:\Shubham7807\DE\sheets\sa.jpg"');
+    background-position: center;
+    background-size: cover;
+}
 
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+
+}
+
+button {
+    padding: 10px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.message {
+    margin-top: 20px;
+    text-align: center;
+    color: red;
+}

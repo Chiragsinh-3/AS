@@ -1,31 +1,100 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: Century;
+}
+
+nav {
+    margin: 0;
+    display: flex;
+    background-color: black;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+}
+
+.navigation li {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 5px;
+    border-color: aliceblue;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navigation li:hover {
+    background-color: white;
+
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.registration{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 .regi_body{
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 50%; */
-    margin-top: 20vh;
-    height: 40vh;
-    width: 30vw;
-    border-radius: 10px;
-}
-.regi_page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(148, 255, 205);
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    width: 50%;
+    height: 250px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('"D:\Shubham7807\DE\sheets\sa.jpg"');
+    background-position: center;
+    background-size: cover;
 }
 h2{
     font-size: 30px;
     
 }
-.username{
-    background-color: aqua;
-    
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-.input{
-    background-color: antiquewhite;
+
+input[type="text"],
+input[type="password"]{
+    background-color: rgba(250, 235, 215, 0);
+    width: 95%;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+button{
+    padding: 10px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
 }

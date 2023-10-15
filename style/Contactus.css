@@ -1,18 +1,52 @@
 /* Contactus.css */
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: Century;
 }
-body {
-    font-family: Arial, sans-serif;
+
+nav {
     margin: 0;
+    display: flex;
+    background-color: black;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+}
+
+.navigation li {
+    display: flex;
+    list-style: none;
     padding: 0;
 }
 
-header {
-    background-color: #000000;
-    padding: 20px;
-    text-align: center;;
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 5px;
+    border-color: aliceblue;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navigation li:hover {
+    background-color: white;
+
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
 h1 {
@@ -38,11 +72,7 @@ p {
     margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: disc;
-    margin-bottom: 10px;
-    padding-left: 20px;
-}
+
 
 .contact-info {
     display: grid;
