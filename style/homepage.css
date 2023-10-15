@@ -6,10 +6,11 @@
 }
 
 
-.whole{
+.whole {
     z-index: 9;
-    
+
 }
+
 nav {
     margin: 0;
     display: flex;
@@ -91,7 +92,8 @@ p {
     margin-bottom: 50px;
     z-index: 9;
 }
-ol{
+
+ol {
     z-index: 9;
 }
 
@@ -118,7 +120,7 @@ ol{
     animation: rotate 20s infinite;
     opacity: 0.8;
     z-index: 1;
-    
+
 }
 
 #blur {
@@ -127,19 +129,30 @@ ol{
     position: absolute;
     z-index: 2;
     backdrop-filter: blur(12vmax);
-    
+
 }
 
-@keyframes rotate {
-    from {
-        rotate: 0deg;
-    }
-
-    50% {
-        scale: 1 1.5;
-    }
-
-    to {
-        rotate: 360deg;
+@media screen and (max-width: 600px) {
+    #blur,#blob{
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
     }
 }
+
+    @keyframes rotate {
+        from {
+            rotate: 0deg;
+        }
+
+        50% {
+            scale: 1 1.5;
+        }
+
+        to {
+            rotate: 360deg;
+        }
+    }
