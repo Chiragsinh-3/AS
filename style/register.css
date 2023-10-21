@@ -1,13 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Century;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.whole {
+    z-index: 9;
+
 }
 
 nav {
     margin: 0;
     display: flex;
     background-color: black;
+    z-index: 9;
 }
 
 .navigation {
@@ -16,6 +24,7 @@ nav {
     align-items: center;
     justify-content: center;
     border-radius: 25%;
+    z-index: 9;
 }
 
 .navigation li {
@@ -32,28 +41,29 @@ a {
     padding: 25px;
     padding-left: 50px;
     padding-right: 50px;
+
 }
 
 .navigation li:hover {
-    background-color: white;
-
+    background-color: rgba(255, 255, 255, 0.311);
+    transition: all .5s ease-in-out;
 }
 
 a:hover {
     color: rgb(0, 0, 0);
+    transition: all .5s ease-in-out;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #adadad;
 }
-.registration{
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 50px;
-}
-.regi_body{
-    background-color: rgb(148, 255, 205);
+
+
+
+.regi_body {
     max-width: 400px;
     margin: auto;
     padding: 20px;
@@ -61,40 +71,121 @@ body {
     border-radius: 4px;
     position: relative;
     width: 50%;
-    height: 250px;
+    height: 230px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url('"D:\Shubham7807\DE\sheets\sa.jpg"');
+    background-color: #0000001c;
     background-position: center;
     background-size: cover;
+    z-index: 9;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.34), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
-h2{
+.registration{
+    padding: 0;
+    display: block;
+}
+
+h2 {
+    padding: 0;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    color: #ffffff8a;
+    position: sticky;
     font-size: 30px;
     
+    z-index: 9;
 }
+
+
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #000000c8;
+    z-index: 9;
 }
 
 input[type="text"],
-input[type="password"]{
-    background-color: rgba(250, 235, 215, 0);
+input[type="password"] {
     width: 95%;
     padding: 8px;
+    background-color: #00000000;
+    border: none;
+    border-bottom: 2px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
+    color: #000000b8;
+    outline: none;
+    z-index: 9;
 }
 
-button{
+::placeholder {
+    color: rgba(0, 0, 0, 0.374);
+    opacity: 1;
+    /* Firefox */
+}
+
+button {
     padding: 10px 16px;
-    background-color: #4caf50;
+    background-color: #00000036;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
+
 button:hover {
-    background-color: #45a049;
+    background-color: #00000092;
+}
+
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(89, 255, 74), #4affed, rgb(70, 79, 255));
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    z-index: 1;
+
+}
+
+#blur {
+    height: 125%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+
+}
+
+@media (max-width: 600px) {
+    #blur {
+        display: none;
+    }
+
+    #blob {
+        display: none;
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
 }

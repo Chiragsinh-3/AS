@@ -3,9 +3,9 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="stylesheet" href="style/login.css">
-	
+
 	<title>login</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
@@ -13,6 +13,10 @@
 </head>
 
 <body>
+	<div class="HID">
+		<div id="blob"></div>
+		<div id="blur"></div>
+	</div>
 	<nav>
 		<ul class="navigation">
 			<li class="navigation-item"><a href="index.html">Home</a></li>
@@ -23,19 +27,12 @@
 
 		</ul>
 	</nav>
-	<div style="
-    display: flex;
-    justify-content: center;
-    align-items: center;">
-		<p style="
-            font-size: 40px;
-            margin-top: 40px;
-            font-family: Courier New;
-        ">Login</p>
+	<div>
+		<h2>Login</h2>
 	</div>
 	<br>
 	<div class="container">
-		
+
 		<form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
 			<div class="col-sm-4">
 				<div class="form-group">
@@ -119,6 +116,19 @@
 		});
 	});
 	//----- End
+
+</script>
+<script>
+	const blob = document.getElementById("blob");
+
+	window.onpointermove = event => {
+		const { clientX, clientY } = event;
+
+		blob.animate({
+			left: `${clientX}px`,
+			top: `${clientY}px`
+		}, { duration: 3000, fill: "forwards" });
+	}
 
 </script>
 

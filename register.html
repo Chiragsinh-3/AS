@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="style/register.css">
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+	</style>
 </head>
 
 <body>
+    <div class="HID">
+        <div id="blob"></div>
+        <div id="blur"></div>
+    </div>
     <nav>
         <ul class="navigation">
             <li class="navigation-item"><a href="index.html">Home</a></li>
@@ -105,6 +112,19 @@
         });
     });
     //----- End
+
+</script>
+<script>
+    const blob = document.getElementById("blob");
+
+    window.onpointermove = event => {
+        const { clientX, clientY } = event;
+
+        blob.animate({
+            left: `${clientX}px`,
+            top: `${clientY}px`
+        }, { duration: 3000, fill: "forwards" });
+    }
 
 </script>
 

@@ -3,14 +3,21 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Century;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.whole {
+    z-index: 9;
+
 }
 
 nav {
     margin: 0;
-    padding: 0;
     display: flex;
     background-color: black;
+    z-index: 9;
 }
 
 .navigation {
@@ -18,10 +25,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    border-radius: 25%;
+    z-index: 9;
 }
 
-.navigation-item{
+.navigation li {
     display: flex;
     list-style: none;
     padding: 0;
@@ -35,11 +43,12 @@ a {
     padding: 25px;
     padding-left: 50px;
     padding-right: 50px;
+
 }
 
 .navigation li:hover {
-    background-color: white;
-
+    background-color: rgba(255, 255, 255, 0.311);
+    transition: all .5s ease-in-out;
 }
 
 a:hover {
@@ -50,12 +59,15 @@ a:hover {
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
+    overflow-x: hidden;
+    background-color: #adadad;
 }
 
 
 
 main {
     padding: 20px;
+    z-index: 9;
 }
 
 h2 {
@@ -63,16 +75,19 @@ h2 {
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+    z-index: 9
 }
 
 p {
     line-height: 1.5;
     margin-bottom: 10px;
+    z-index: 9;
 }
 
 .valueUl,.serUl {
     list-style-type: none;
     margin-bottom: 10px;
+    z-index: 9;
     padding-left: 20px;
 }
 
@@ -82,10 +97,13 @@ footer {
     text-align: center;
     color: #666;
     font-size: 14px;
+    position: sticky;
+    z-index: 9;
 }
 section{
     text-align: left;
     margin-bottom: 50px;
+    z-index: 9;
 }
 li{
     list-style: circle;
@@ -107,3 +125,50 @@ section{
 .serUl li{
     list-style: circle;
 }
+#blob {
+    background-color: white;
+    height: 35vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right,rgb(89, 255, 74),#4affed, rgb(70, 79, 255));
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    z-index: 1;
+
+}
+
+#blur {
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+    height: 200%;
+    width: 100%;
+
+}
+
+@media (max-width: 600px)   {
+    #blur {
+        display: none;
+    }
+    #blob {
+        display: none;
+    }
+}
+
+    @keyframes rotate {
+        from {
+            rotate: 0deg;
+        }
+
+        50% {
+            scale: 1 1.5;
+        }
+
+        to {
+            rotate: 360deg;
+        }
+    }
